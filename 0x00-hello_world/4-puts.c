@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - Entry Point
+ * main - C Program
  * main - Using 'puts' function to Write a string to the output(stdout) stream
  * 'C Program That Prints A Character String Using Puts functuon'
- * Return - Always 0 (Success)
+ * Return: 0 if the program is a Success else 1
  */
 
 int main(void)
