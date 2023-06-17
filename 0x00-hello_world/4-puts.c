@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * my_puts - Entry Point
- * my_puts - Write a string to the output(stdout) stream
+ * main - Entry Point
+ * main - Using 'puts' function to Write a string to the output(stdout) stream
  * 'C Program That Prints A Character String Using Puts functuon'
  * Return - Always 0 (Success)
  */
 
-void  my_puts(void)
+void  main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 }
