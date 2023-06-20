@@ -17,15 +17,9 @@ int main(void)
 		putchar('0' + i);
 		putchar(',');
 		putchar(' ');
-		if (i == 9)
-		{
-			goto step1;
-			goto step2;
-		}
 	}
-step1:
+	i = 9;
 	putchar('0' + i);
-step2:
 	putchar('\n');
 	return (0);
 
