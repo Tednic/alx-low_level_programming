@@ -21,22 +21,22 @@ char *rot13(char *str)
 	'a', 'b', 'c', 'd', 'e', 'f', 'g',
 	'h', 'i', 'j', 'k', 'l', 'm'};
 
-	int i = 0;
+	int index1 = 0;
 
-	int j;
+	int index2;
 
-	while (str[i])
+	while (str[index1])
 	{
-		for (j = 0; j < 52; j++)
+		for (index2 = 0; index2 < 52; index2++)
 		{
-			if (str[i] == _alphabet[j])
+			if (str[index1] == _alphabet[index2])
 			{
-				str[i] = _rot13key[j];
+				str[index1] = _rot13key[index2];
 				break;
 			}
 		}
 
-		i++;
+		index1++;
 	}
 
 	return (str);
