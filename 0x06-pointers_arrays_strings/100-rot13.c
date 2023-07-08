@@ -1,24 +1,32 @@
-#include <stdio.h>
 
 /**
-  * rot13 - a function that encodes a string using rot13
-  * @str: The string to be encoded into rot13
-  * Only one if and two loops are use in the code
-  * Switch and any ternary operation was not use
-  * Return: a pointer to the string encoded is returned.
+  * rot13 - function encodes a string in rot13
+  * @str: string to be encoded
+  * Return: a pointer to the string encoded
+  * i and j are indices that allow us to keep track of the position
+  * of elements in the string array.
   */
+
+#include "main.h"
 
 char *rot13(char *str)
 {
-	int index1 = 0, index2;
+	int i = 0, j;
 
-	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+	char alphabet[52] = {
+		'A', 'B', 'C', 'D', 'E', 'F',
 		'G', 'H', 'I', 'J', 'K', 'L',
 		'M', 'N', 'O', 'P', 'Q', 'R',
 		'S', 'T', 'U', 'V', 'W', 'X',
-		'Y', 'Z'};
+		'Y', 'Z', 'a', 'b', 'c', 'd',
+		'e', 'f', 'g', 'h', 'i', 'j',
+		'k', 'l', 'm', 'n', 'o', 'p',
+		'q', 'r', 's', 't', 'u', 'v',
+		'w', 'x', 'y', 'z'
+	};
 
-	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+	char rot13key[52] = {
+		'N', 'O', 'P', 'Q', 'R', 'S',
 		'T', 'U', 'V', 'W', 'X', 'Y',
 		'Z', 'A', 'B', 'C', 'D', 'E',
 		'F', 'G', 'H', 'I', 'J', 'K',
@@ -26,21 +34,21 @@ char *rot13(char *str)
 		'r', 's', 't', 'u', 'v', 'w',
 		'x', 'y', 'z', 'a', 'b', 'c',
 		'd', 'e', 'f', 'g', 'h', 'i',
-		'j', 'k', 'l', 'm'};
+		'j', 'k', 'l', 'm'
+	};
 
-	while (str[index1])
+	while (str[i])
 	{
-		for (index2 = 0; index2 < 52; index2++)
+		for (j = 0; j < 52; j++)
 		{
-			if (str[index1] == alphabet[index2])
+			if (str[i] == alphabet[j])
 			{
-				str[index1] = rot13key[index2];
+				str[i] = rot13key[j];
 				break;
 			}
 		}
 
-		index1++;
+		i++;
 	}
-
 	return (str);
 }
