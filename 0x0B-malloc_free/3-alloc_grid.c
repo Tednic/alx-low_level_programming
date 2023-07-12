@@ -11,7 +11,7 @@
  * alloc_grid - function returns a pointer to a 2D array of integers.
  * @width: width of the 2D array.
  * @height: height of the 2D array.
- * Returns: a pointer to the 2D array, NULL for width, height <= 0 or failure
+ * Return: a pointer to the 2D array, NULL for width, height <= 0 or failure
  */
 
 int **alloc_grid(int width, int height)
