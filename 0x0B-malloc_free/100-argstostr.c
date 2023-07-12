@@ -17,10 +17,10 @@
 char *argstostr(int ac, char **av)
 {
 	/*
-	 * *str: a pointer to a char string from concatenated arguments passed to the program
+	 * *str: a pointer to the char concatenated string
 	 * i: loop counter for each argument in the array vector
 	 * j: loop counter for each character in each of the argument passed
-	 * k: keeps track  in array of the position in str 
+	 * k: keeps track  in array of the position in str
 	 * size: char size
 	 */
 
