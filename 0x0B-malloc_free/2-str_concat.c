@@ -8,6 +8,10 @@
  * str_concat - function concatenates two strings
  * @s1: String 1 to be concatenated
  * @s2: string2 concatenating to s1
+ * Return: a ponter to a newly allocated space in memory containing...
+ * ...the contents of s1, followed by the contents of s2, and null terminated
+ * if NULL is passed, treat it as an empty string
+ * The function should return NULL on failure.
  */
 
 #include <stdlib.h>
@@ -18,8 +22,9 @@ char *str_concat(char *s1, char *s2)
 	char *concat_str;
 	int i, concat_i = 0, stringlen = 0;
 
-/* i and concat_i are indices to track s1 and s2 char positions
-   * concat_str is the string after s1 and s2 are concatenated
+/*
+ * i and concat_i are indices to track s1 and s2 char positions
+ * concat_str is the string after s1 and s2 are concatenated
  * concat_i is and index for the resulting concatenated string
  * stringlen is the string length of thw resulting concatenated string.
  */
