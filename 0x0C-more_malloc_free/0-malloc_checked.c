@@ -23,7 +23,7 @@ void *malloc_checked(unsigned int b)
 	void *allocated_memory = malloc(b);
 
 	if (allocated_memory == NULL)
-		EXIT_FAILURE;
+		exit(98);
 
 	return (allocated_memory);
 }
