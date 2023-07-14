@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *allocated_memory;
 	unsigned int memsize_InBytes;
 	unsigned int i;
-	char*c;
+	char *c;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -38,7 +38,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 /* Initialize allocated memory block to zero */
 /* Fill up the mem via loop by iterating with i eith the pointer, c */
-	for (i = 0; i < (nmemb * size); i++)
+	for (i = 0; i < (memsize_InBytes); i++)
 		c[i] = '\0';
 
 	return (allocated_memory);
