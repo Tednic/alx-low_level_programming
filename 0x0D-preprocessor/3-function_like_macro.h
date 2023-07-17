@@ -8,8 +8,6 @@
  * File Description: A header file that defines the ABS(X) macro
  */
 
-/* This is implemented using a Parameterized Macro */
-
 #define ABS(x) ((x) < 0 ? (-x) : (x)) 
 
 #endif
