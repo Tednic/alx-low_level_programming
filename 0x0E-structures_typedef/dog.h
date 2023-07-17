@@ -1,6 +1,11 @@
 #ifndef DOG_H
 #define DOG_H
 
+/*
+ * Task: Define a new type struct dog with name, age, and owner as elements
+ * Filename: dog.h (a header file for the task)
+ */
+
 /**
  * struct dog - A new type structure for a dog with various attributes.
  * @name: The name of the dog.
