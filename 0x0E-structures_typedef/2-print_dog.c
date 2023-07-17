@@ -11,6 +11,7 @@
 /**
  * print_dog - this dunction Prints a struct dog.
  * @d: A pointer to the struct dog.
+ * Return: void
  */
 
 void print_dog(struct dog *d)
