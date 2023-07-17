@@ -1,5 +1,5 @@
-#ifndef ABSFUNCTION_LIKE_MACRO_H 
-#define ABSFUNCTION_LIKE_MACRO_H 
+#ifndef FUNCTION_LIKE_MACRO_H 
+#define FUNCTION_LIKE_MACRO_H 
 
 /* 
  * Task: Write a function-like macro ABS(x) that computes the abs value of number x
