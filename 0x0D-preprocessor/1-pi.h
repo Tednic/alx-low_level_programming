@@ -1,5 +1,5 @@
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
+#ifndef PI_H
+#define PI_H
 
 /*
  * Task: Create a header file that defines a macro named PI
