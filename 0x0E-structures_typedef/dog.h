@@ -1,16 +1,11 @@
 #ifndef DOG_H
 #define DOG_H
 
-/* 
- * Task: Define a new type struct dog with attributes name, age, & owner
- * Filename: dog.h (header file that defines a new type struct dog).
- */
-
 /**
- * struct dog - A new type structure for a dog with various items.
- * @name: The dog's name.
- * @age: The dogs age.
- * @owner: The dog's owner details.
+ * struct dog - A new type structure for a dog with various attributes.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The name of the owner of the dog.
  */
 
 typedef struct dog
@@ -19,7 +14,6 @@ typedef struct dog
 	float age;
 	char *owner;
 } dog_t;
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
