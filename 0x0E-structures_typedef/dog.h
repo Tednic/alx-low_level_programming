@@ -6,10 +6,10 @@
  * name, type = char *
  * age, type = float
  * owner, type = char *
- * Filename & description: dog.h & A header file that defines a new type struct dog.
+ * Filename: dog.h. This is a header file that defines a new type struct dog.
  */
 
-/** 
+/**
  * struct dog - A new type structure for a dog with various items.
  * @name: The dog's name.
  * @age: The dogs age.
