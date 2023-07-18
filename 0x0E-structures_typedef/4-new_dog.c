@@ -19,7 +19,7 @@ int _strlen(char *s);
  * Return: A pointer to struct dog_t. NULL if functiin fails.
  */
 
-dog_t *new_dog(char *name, float age, char *owner) 
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *puppy;
 	char *puppy_name;
