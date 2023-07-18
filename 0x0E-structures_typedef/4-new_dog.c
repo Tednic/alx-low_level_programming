@@ -1,3 +1,10 @@
+/*
+ * Task: Write a function that creates a new dog.
+ * Filename: 4-new_dog.c
+ * Prototype: dog_t *new_dog(char *name, float age, char *owner)
+ * _strcpy and _strlen are used alongside.
+ */
+
 #include "dog.h"
 #include <stdlib.h>
 
@@ -5,76 +12,83 @@ char *_strcpy(char *src);
 int _strlen(char *s);
 
 /** 
- * new_dog - function creates a new dog
- * @name: the name of a dog
- * @age: the age of a dog
- * @owner: the name of a dog owner
- * Return: A pointer to dog_t struct
+ * new_dog - this function creates a new dog
+ * @name: a name string for the dog
+ * @age: the age of the dog of float type
+ * @owner: a string that represents the owner of the dog
+ * Return: A pointer to struct dog_t. NULL if functiin fails.
  */
 
 dog_t *new_dog(char *name, float age, char *owner) 
 {
-	dog_t *d;
-	char *d_name;
-	char *d_owner;
+	dog_t *puppy;
+	char *puppy_name;
+	char *puppy_owner;
 
-	d = malloc(sizeof(dog_t));
-	if (d == NULL)
+	puppy = (dog_t *) malloc(sizeof(dog_t));
+
+	if (puppy == NULL)
 		return (NULL);
-	d_owner = _strcpy(owner);
-	if (d_owner == NULL)
+
+	puppy_owner = _strcpy(owner);
+
+	if (puppy_owner == NULL)
 	{
-		free(d);
+		free(puppy);
 		return (NULL);
 	}
-	d_name = _strcpy(name);
-	if (d_name == NULL)
+
+	puppy_name = _strcpy(name);
+
+	if (puppy_name == NULL)
 	{
-		free(d_owner);
-		free(d);
+		free(puppy_owner);
+		free(puppy);
 		return (NULL);
 	}
-	d->name = d_name; 
-	d->age = age;
-	d->owner = d_owner;
-	return (d);
+
+	puppy->name = puppy_name; 
+	puppy->age = age;
+	puppy->owner = puppy_owner;
+	return (puppy);
 }
 
 /**
- * _strlen - Calculates the length of a string
- * @s: string
- * Descripion: Calculates the lenght of a string
- * Return: An integer representing the lenght of a string
+ * _strlen - length of a string
+ * @s: a string
+ * Return: the lenght of string of int type
  */
 
 int _strlen(char *s)
-{ 
-	int len; 
+{
+	int length;
 
-	for (len = 0; s[len]; len++) 
-	{} 
+	for (length = 0; s[length]; length++)
+	{}
+	return (length);
+}
 
-	return (len); 
-} 
+/**
+ * _strcpy - creates the copy of a string @src
+ * @src: the string to be copied
+ * Return: the copy of string @src
+ */
 
-/** 
- * _strcpy - create a copy of a string 
- * @src: Contains the original string 
- * Return: Gives back the copy of string 
- */ 
-char *_strcpy(char *src) 
-{ 
-	int i; 
-	int len; 
-	char *dest; 
+char *_strcpy(char *src)
+{
+	int i;
+	int length;
+	char *destination;
 
-	len = _strlen(src); 
-	dest = malloc(sizeof(char) * len + 1); 
-	if (dest == NULL) 
-		return (NULL); 
+	length = _strlen(src);
+	destination = malloc(sizeof(char) * length + 1);
 
-	for (i = 0; src[i] != '\0'; i++) 
-		dest[i] = src[i]; 
-	dest[i] = '\0'; 
-	return (dest); 
+	if (destination == NULL)
+		return (NULL);
+
+	for (i = 0; src[i] != '\0'; i++)
+		destination[i] = src[i];
+
+	destination[i] = '\0';
+	return (destination);
 }
