@@ -11,7 +11,7 @@
 char *_strcpy(char *src);
 int _strlen(char *s);
 
-/** 
+/**
  * new_dog - this function creates a new dog
  * @name: a name string for the dog
  * @age: the age of the dog of float type
