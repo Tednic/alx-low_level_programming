@@ -1,32 +1,24 @@
-/*
- * Task: Write a function that searches for an integer
- * Filename: 2-int_index.c
- * Prototype: int int_index(int *array, int size, int (*cmp)(int))
- */
-
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
  * int_index - function that searches for an integer
+ * @cmp: a pointer to the function to be used to compare values
+ * @array: contaibs elements to be searched for integers
  * @size: the number of elements in the array array
- * @cmp: pointer to the function to be used to compare values
- * Return: returns the index of the first element for which
- * the cmp function does not return 0. If no element matches, return -1
- * If size <= 0, return -1
+ * Return: return -1 if no match and size <= 0. otherwise
+ * the index for first element where the cmp function doe snot  return 0
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	/* Use j to track the element that is an integer in the array */
-
-	int j;
+	int i;
 
 	if (array && cmp)
-	{
+	{ 
 		if (size <= 0)
 			return (-1);
 
-		for (j = 0; j < size; i++)
+		for (i = 0; i < size; i++)
 			if (cmp(array[i]))
 				return (i);
 	}
