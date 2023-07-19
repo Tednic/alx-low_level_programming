@@ -3,7 +3,7 @@
 #include "stdlib.h"
 
 /**
- * main - controls program execution by directing function calls in the program
+ * main - controls program execution by directing function calls
  * @argc: argument count passed to main
  * @argv: argument values passed to main
  * Return: Always 0
