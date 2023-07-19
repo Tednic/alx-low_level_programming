@@ -17,19 +17,19 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-/* Use j to track the element that is an integer in the array */
+	/* Use j to track the element that is an integer in the array */
+
 	int j;
 
-	if (array == NULL || cmp == NULL)
-		return (-1);
-
-	if (size <= 0)
-		return (-1);
-
-	for (j = 0; j < size; j++)
+	if (array && cmp)
 	{
-		if (cmp(array[j]) != 0)
-			return (j);
+		if (size <= 0)
+			return (-1);
+
+		for (j = 0; j < size; i++)
+			if (cmp(array[i]))
+				return (i);
 	}
+
 	return (-1);
 }
