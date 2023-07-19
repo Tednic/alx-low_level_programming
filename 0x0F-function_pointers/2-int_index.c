@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 /**
- * int_index - a function that searches for an integer
+ * int_index - function that searches for an integer
  * @size: the number of elements in the array array
  * @cmp: pointer to the function to be used to compare values
  * Return: returns the index of the first element for which
