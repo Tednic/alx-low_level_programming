@@ -11,10 +11,12 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
+/* int i iterates over the array elements btw  0 to size during search */
+
 	int i;
 
 	if (array && cmp)
-	{ 
+	{
 		if (size <= 0)
 			return (-1);
 
