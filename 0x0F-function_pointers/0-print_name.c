@@ -15,10 +15,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-		void (*prt_name)(char *);
-
 		if (f == NULL || name == NULL)
 			return;
-		prt_name = f;
-		prt_name(name);
+		f(name);
 }
