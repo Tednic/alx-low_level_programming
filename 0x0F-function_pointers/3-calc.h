@@ -1,21 +1,11 @@
-#ifndef SIMPLE_OPERATIONS_CALC
-#define SIMPLE_OPERATIONS_CALC
-
-/*
- * Task: Write a program that performs simple operations
- * using these operators: +, -, *, /, and %.
- * Usage: calc num1 operator num2
- * Filename: 3-calc.h
- * This file contains all the function prototypes and
- * data structures used by the program. You can use this structure below:
- */
+#ifndef _CALC_H
+#define _CALC_H
 
 /**
  * struct op - Struct op
  * @op: The operator
- * @f: The function pointer associated with the operations
+ * @f: The function associated
  */
-
 typedef struct op
 {
 	char *op;
@@ -29,4 +19,4 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif
+#endif /* _CALC_H */
