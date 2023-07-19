@@ -16,6 +16,8 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+/* Use i to iterate over each ekement of the array from 0 to array size */
+
 	unsigned int i;
 
 	if (array && action)
