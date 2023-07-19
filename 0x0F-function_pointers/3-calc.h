@@ -1,10 +1,13 @@
-#ifndef _CALC_H
-#define _CALC_H
+#ifndef CALC_H
+#define CALC_H
+
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * struct op - Struct op
- * @op: The operator
- * @f: The function associated
+ * struct op - struct containing its operators and function pointers
+ * @op: pointer to the operators add, sub, multiplication, div, and modulo
+ * @f: a function pointer associated with a and b
  */
 typedef struct op
 {
@@ -19,4 +22,4 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif /* _CALC_H */
+#endif
