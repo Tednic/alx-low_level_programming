@@ -1,3 +1,7 @@
+/*
+ * Task: Write a program that prints the opcodes of its own main function
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	int bytes, index;
+	int number_of_bytes, i;
 	int (*address)(int, char **) = main;
 	unsigned char opcode;
 
@@ -20,20 +24,20 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(argv[1]);
+	number_of_bytes = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (number_of_bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (index = 0; index < bytes; index++)
+	for (i = 0; i < number_of_bytes; i++)
 	{
 		opcode = *(unsigned char *)address;
 		printf("%.2x", opcode);
 
-		if (index == bytes - 1)
+		if (i == number_of_bytes - 1)
 			continue;
 		printf(" ");
 
