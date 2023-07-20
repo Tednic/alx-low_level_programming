@@ -1,3 +1,5 @@
 #ignore files containing main.c andn.ca _putchar.c
+*main.c
+_putchar.c
 *demo
 demo.h
