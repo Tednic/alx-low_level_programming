@@ -1,6 +1,7 @@
 /*
- * Task: Write a function that prints strings, followed by a new line 
- * Prototype: void print_strings(const char *separator, const unsigned int n, ...)
+ * Task: Write a function that prints strings, followed by a new line
+ * Prototype: void print_strings(const char *separator,
+ * const unsigned int n, ...)
  *where separator is the string to be printed between the strings
  * If separator is NULL, don’t print it
  * one of the string is NULL, print (nil) instead
