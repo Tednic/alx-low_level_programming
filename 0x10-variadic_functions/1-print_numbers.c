@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - function that prints numbers, followed by \n 
+ * print_numbers - function that prints numbers, followed by \n
  * @separator: the string to be printed between numbers
  * @n: the number of integers passed to the function
  */
