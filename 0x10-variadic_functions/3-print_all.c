@@ -30,28 +30,28 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(a_list, int));
-				flag = True;
+				flag = 0;
 				break;
 			case 'i':
 				printf("%i", va_arg(a_list, int));
-				flag = True;
+				flag = 0;
 				break;
 			case 'f':
 				printf("%f", va_arg(a_list, double));
-				flag = True;
+				flag = 0;
 				break;
 			case 's':
 				str = va_arg(a_list, char*);
 				if (str == NULL)
 					str = "(nil)";
 				printf("%s", str);
-				flag = True;
+				flag = 0;
 				break;
 			default:
-				flag = False;
+				flag = 1;
 				break;
 		}
-		if (flag == True && format[i + 1] != '\0')
+		if (flag == 0 && format[i + 1] != '\0')
 			printf(", ");
 		i++;
 	}
