@@ -23,9 +23,9 @@ void print_all(const char * const format, ...)
 	int flag;
 	int i;
 
-	va_start(a_list, format);
 	i = 0;
-	while (format != NULL && format[i] != '\0')
+	va_start(a_list, format);
+	while (format[i] != '\0' && format != NULL)
 	{
 		switch (format[i])
 		{
@@ -52,7 +52,7 @@ void print_all(const char * const format, ...)
 				flag = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && flag == 0)
+		if (flag == 0 && format[i + 1] != '\0')
 			printf(", ");
 		i++;
 	}
