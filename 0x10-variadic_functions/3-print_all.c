@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	va_list a_list;
 	int flag;
-	int = 0;
+	int i = 0;
 
 	va_start(a_list, format);
 	while (format[i] != '\0' && format != NULL)
