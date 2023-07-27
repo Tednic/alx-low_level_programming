@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 
 	if (h == NULL) /* checks if h pointer is null */
 		return (0); /* if null, the list is empty */
-	for (count_node = 1; h->next != NULL; i++)
+	for (count_node = 1; h->next != NULL; count_node++)
 	{ /* loop iterates over the nodes in yhe list */
 		if (h->str == NULL)
 			printf("[%u] %s\n", h->len, "(nil)");
