@@ -55,6 +55,8 @@ int len_str(const char *str)
 
 	if (str == NULL) /* str doesn't points to a memory address */
 		return (0); /* str has zero length */
-	for (j = 0; str[j] != '\0'; j++); /* loop iterates over string characters */
+	for (j = 0; str[j] != '\0'; j++)
+		;
+	/* loop iterates over string characters */
 	return (j); /* string length is returned */
 }
