@@ -3,7 +3,7 @@
 
 /*
  * Filename: lists.h
- * Descrition: a header file with prototypes definitions for all functions
+ * Description: a header file with prototypes definitions for all functions
  * used in 0x12-more_singly_linked_lists directory.
  */
 
